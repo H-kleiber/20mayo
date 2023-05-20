@@ -1,0 +1,42 @@
+.contenido{
+    display: flex;
+    justify-content: space-around;
+}
+.tareas{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.imprimirdato{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    
+}
+.calculadora{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    height: 90px;
+}
+.contenedorsection{
+    display: flex;
+}
+.btnDelete{
+    width: 100px;
+    height: 30px;
+    margin:1px;
+    padding: 2px;
+}
+.imprimirdato{
+    width: 126px;
+    height: 25px;
+}
+
+.buttoncal{
+width: 32px;
+}
+
+
+
+
