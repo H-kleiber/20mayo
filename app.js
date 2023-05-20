@@ -52,13 +52,16 @@ const btncal=document.querySelectorAll("button")
 
 btncal.forEach(element => {
   
+  btn.addEventListener("click", ()=> {
+    if(btn.id === '='){
+        pantalla.value = eval(pantalla.value);
+
+    }else if(btn.id === 'ac'){
+        pantalla.value = '';
+
+    }else{
+        pantalla.value = pantalla.value + btn.id;
+    }
+})
 });
 
-
-uno.addEventListener("click",()=>{
-  const uno =document.getElementById("uno").value = 1;
-});
-
-function resultado(){
-  
-}
