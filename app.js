@@ -28,7 +28,7 @@ function agregar(){
         const item = e.target.parentElement;
         console.log(item)
         console.log(lista)
-        lista.parentNode.remove(item)
+        lista.removeChild(item)
     
       });
     
