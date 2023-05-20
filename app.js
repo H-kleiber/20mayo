@@ -45,23 +45,20 @@ btn.addEventListener("click", function(e) {
       
 
 /*--------------------------------------------------------------------------------------*/
-const pantalla=document.getElementById("pantalla");
-const btncal=document.querySelectorAll("button")
+const button = document.querySelectorAll("button");
 
+const pantalla = document.getElementById("pantalla");
 
+button.forEach((btn) => {
+    btn.addEventListener("click", ()=> {
+        if(btn.id === '='){
+            pantalla.value = eval(pantalla.value);
 
-btncal.forEach(element => {
-  
-  btn.addEventListener("click", ()=> {
-    if(btn.id === '='){
-        pantalla.value = eval(pantalla.value);
+        }else if(btn.id === 'ac'){
+            pantalla.value = '';
 
-    }else if(btn.id === 'ac'){
-        pantalla.value = '';
-
-    }else{
-        pantalla.value = pantalla.value + btn.id;
-    }
-})
-});
-
+        }else{
+            pantalla.value = pantalla.value + btn.id;
+        }
+    })
+} )
