@@ -13,9 +13,10 @@ function agregar(){
 
     lista.classList.add("contenedorsection")
     btnDelete.classList.add("btnDelete")
+
     imprimirdato.classList.add("imprimirdato")
 
-    btnDelete.innerHTML="Eliminar"
+    btnDelete.textContent="eliminar"
 
     lista.appendChild(imprimirdato);
     lista.appendChild(btnDelete)
@@ -23,20 +24,18 @@ function agregar(){
 
     btnDelete.addEventListener("click", function(e) {
         e.preventDefault()
-        deleteitem()
+        console.log(e)
+        const item = e.target.parentElement;
+        console.log(item)
+        console.log(lista)
+        lista.parentNode.remove(item)
     
       });
     
 }
-function deleteitem(e){
-const item = e.target.parentElement;
-console.log(item)
 
-lista.removechild(item)
 
-}
-
-    btn.addEventListener("click", function(e) {
+btn.addEventListener("click", function(e) {
         e.preventDefault()
         agregar()
     
@@ -46,7 +45,20 @@ lista.removechild(item)
       
 
 /*--------------------------------------------------------------------------------------*/
+const pantalla=document.getElementById("pantalla");
+const btncal=document.querySelectorAll("button")
 
-function resolver(){
+
+
+btncal.forEach(element => {
+  
+});
+
+
+uno.addEventListener("click",()=>{
+  const uno =document.getElementById("uno").value = 1;
+});
+
+function resultado(){
   
 }
