@@ -7,28 +7,46 @@ function agregar(){
 
     lista=document.createElement('div')
     imprimirdato=document.createElement('div')
+    imprimirdato.innerHTML=`${datos}`
     
     btnDelete=document.createElement('button')
-    imprimirdato.innerHTML=`${datos}`
 
     lista.classList.add("contenedorsection")
     btnDelete.classList.add("btnDelete")
-
     imprimirdato.classList.add("imprimirdato")
 
     btnDelete.textContent="eliminar"
 
     lista.appendChild(imprimirdato);
-    lista.appendChild(btnDelete)
+    lista.appendChild(btnDelete);
     section.appendChild(lista);
+    
+    // imprimirdato.appendChild(btnDelete)
+    // section.appendChild(imprimirdato);
+
+    console.log(section.childNodes)
 
     btnDelete.addEventListener("click", function(e) {
         e.preventDefault()
-        console.log(e)
-        const item = e.target.parentElement;
-        console.log(item)
-        console.log(lista)
-        lista.removeChild(item)
+        let el = e.target;
+        console.log(el)
+        let elListItem= el.parentNode;
+        console.log(elListItem)
+        elFullList = elListItem.parentNode;
+        console.log(elFullList)
+        elFullList.removeChild(elListItem);
+      
+        // const me=e.target;
+        // me.parentNode;
+        // console.log(me)
+        // for(i=0;i<=section.children.length;i++){
+        //     console.log(section.children[i])
+            
+        // }
+        // console.log(imprimirdato)
+        // console.log(imprimirdato.childNodes)
+        // imprimirdato.remove([3]);
+      
     
       });
     
@@ -45,12 +63,13 @@ btn.addEventListener("click", function(e) {
       
 
 /*--------------------------------------------------------------------------------------*/
-const button = document.querySelectorAll("button");
+let button = document.querySelectorAll("button");
 
-const pantalla = document.getElementById("pantalla");
+let pantalla = document.getElementById("pantalla");
 
 button.forEach((btn) => {
     btn.addEventListener("click", ()=> {
+        console.log(btn.id)
         if(btn.id === '='){
             pantalla.value = eval(pantalla.value);
 
@@ -62,3 +81,5 @@ button.forEach((btn) => {
         }
     })
 } )
+
+
